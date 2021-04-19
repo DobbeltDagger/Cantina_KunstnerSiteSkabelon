@@ -1,7 +1,7 @@
 ---
 title: "skabelonProgram"
 plakat: "assets/images/programStoreBilleder/DeathOrGlory.png"
-link: "/exhibitions/"
+link: "/work/"
 date: 2010-01-01
 tags: "upcomingProgram"
 eleventyExcludeFromCollections: false

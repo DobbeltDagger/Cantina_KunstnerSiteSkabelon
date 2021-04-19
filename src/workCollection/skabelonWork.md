@@ -1,6 +1,5 @@
 ---
-title: 'skabelonExhibition.md'
-artists: 'Cantina artist #1'
+title: 'skabelonWork.md'
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices vel magna non sollicitudin'
 imgUrl: '/assets/images/udstillingerStoreBilleder/1.jpg'
 thumbUrl: '/assets/images/udstillingerThumbs/1_thumb.jpg'

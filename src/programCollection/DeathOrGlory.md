@@ -1,7 +1,7 @@
 ---
-title: "or Glory"
+title: "DEMOdemo or Glory"
 plakat: "assets/images/programStoreBilleder/DeathOrGloryPoster.jpg"
-link: "/exhibitionCollection/DeathOrGlory/"
+link: "/work/"
 date: 2010-01-01
 tags: "currentProgram"
 eleventyExcludeFromCollections: false
