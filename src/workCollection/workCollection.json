@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/workSingle.njk",
+  "tags": "work"
+}

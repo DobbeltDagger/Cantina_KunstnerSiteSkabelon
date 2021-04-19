@@ -4,6 +4,6 @@ title: "About"
 eleventyNavigation:
   key: 'About'
   title: 'About'
-  order: 4
+  order: 3
 ---
 

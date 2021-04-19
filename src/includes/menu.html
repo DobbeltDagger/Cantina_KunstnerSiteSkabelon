@@ -1,13 +1,27 @@
 <header>
 
   <div id='logoWrapper'>
-    <a href="/"><img src='/assets/images/Logo.png' alt='Cantina'/></a>
-    <!-- <a href='/'>CANTINA</a> -->
+    <a href='/'>kunstner</a>
   </div>
 
   <!-- navIcon -->
-  <div id='navIconWrapper'>
+  <!-- <div id='navIconWrapper'>
     <a id='navIconBtn' href=''><img src='/assets/images/navIcon7.png'/></a>
+  </div> -->
+
+  <div class='menuWrapper'>
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+      listElement: "ul",
+      listItemElement: "li",
+      listClass: "headerNav",
+      listItemClass: "listItem",
+      listItemHasChildrenClass: "hasChildren",
+      activeListItemClass: "active",
+      anchorClass: "anchor",
+      activeAnchorClass: "activeAnchor",
+      activeKey: eleventyNavigation.key,
+      showExcerpt: false
+    }) | safe }}
   </div>
 
 </header>
