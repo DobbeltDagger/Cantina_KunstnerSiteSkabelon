@@ -202,6 +202,7 @@ body {
   min-height: 100vh;
   border: 1px solid green;
   width: 80%;
+  padding: 1rem 0px;
 }
 
 
@@ -338,6 +339,50 @@ a:hover {
     cursor: pointer;
   }
 
+
+
+  /* WORK Wrapper */
+  .workWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px -0.75rem 0px -0.75rem;
+  }
+
+  .workWrapper .work {
+    flex: 0 0 100%;
+    padding: 0px 0.75rem 1.25rem 0.75rem;
+    overflow: hidden;
+  }
+  /* img */
+  .workWrapper .work .img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+  .workWrapper .work .img a {
+    display: block;
+    width: 100%;
+  }
+  .workWrapper .work .img a img {
+    display: block;
+    width: 100%;
+  }
+  /* info */
+  .workWrapper .work .info {
+    /* font-size: 16px;
+    line-height: 21px; */
+    font-size: 18px;
+    line-height: 26px;  
+  }
+  .workWrapper .work .info .title {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+  }
+
   
 }
 
@@ -345,12 +390,19 @@ a:hover {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (min-width: 500px) {
 
+  .workWrapper .work {
+    flex: 0 0 50%;
+  }
+
 }
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (min-width: 800px) {
 
+  .workWrapper .work {
+    flex: 0 0 33.3333%;
+  }
 
 }
 
@@ -358,18 +410,29 @@ a:hover {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (min-width: 1024px) {
 
+  .workWrapper .work {
+    flex: 0 0 25%;
+  }
+
 }
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (min-width: 1400px) {
 
+  .workWrapper .work {
+    flex: 0 0 20%;
+  }  
 
 }
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (min-width: 1600px) {
+
+  .workWrapper .work {
+    flex: 0 0 16.6666%;
+  }
 
 }
 

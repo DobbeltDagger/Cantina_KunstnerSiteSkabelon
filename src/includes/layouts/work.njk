@@ -31,9 +31,9 @@
   <div class="Grid Grid--gutters Grid--full large-Grid--fit">
     <div class='Grid-cell'>
 
-      <div class='udstillingerWrapper'>
+      <div class='workWrapper'>
         {% for udst in collections.exhibition | reverse %}
-          <div class='udst'>
+          <div class='work'>
             <div class='img'><a href='{{ udst.url }}'><img src='{{ udst.data.thumbUrl }}' alt='{{ udst.data.title }}' title='{{ udst.data.title }}'></a></div>
             <div class='info'>
               <span class='title'>{{ udst.data.title }}</span>
