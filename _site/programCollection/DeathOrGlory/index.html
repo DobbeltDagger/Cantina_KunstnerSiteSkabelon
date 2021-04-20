@@ -73,10 +73,8 @@
         console.log("this", this);
 
         // change visibility on menu
-        const menuElm = document.getElementById('menuWrapper')
+        const menuElm = document.getElementById('menuWrapper');
         
-        // menuElm.classList.toggle('hidden'); // works!
-
         if (menuElm.classList.contains('hidden') === true) {
           menuElm.classList.remove('hidden');
           this.classList.add('down');

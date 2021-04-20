@@ -279,6 +279,8 @@ a:hover {
 
 #menuWrapper {
   padding-top: 0px; /*  1rem; */
+  transition: all 250ms;
+  overflow: hidden;
 }
 #menuWrapper .menuUl {
   list-style-type: none;
@@ -336,12 +338,14 @@ a:hover {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen {
 
+
   /* layout */
   .leftCol {
     width: 100%;
   }
   .rightCol {
     width: 100%;
+    padding: 0px 0px 1rem 0px;  
   }
   .rightColInside {
     max-width: 1280px;
@@ -393,13 +397,16 @@ a:hover {
     height: 2rem;
   }
 
+  #menuWrapper {
+    max-height: none;
+  }
   #menuWrapper.hidden {
     max-height: 0px;
-    overflow: hidden;
   }
 
-  #menuBtn {
-    transition: all 1s;
+  #menuBtn img {
+    transition: transform 200ms;
+    transform: rotate(0deg); /* Equal to rotateZ(45deg) */
   }
   #menuBtn.down img {
     transform: rotate(180deg); /* Equal to rotateZ(45deg) */
@@ -466,11 +473,13 @@ a:hover {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (min-width: 800px) {
 
+  /* layout */
   .leftCol {
-    width: 25%;
+    width: 300px; /* 25%; */
   }
   .rightCol {
-    width: 75%;
+    width: calc(100% - 300px); /* 75%; */
+    padding: 1rem 0px 1rem 0px;  
   }
 
   #menuWrapper.hidden {
@@ -478,11 +487,9 @@ a:hover {
     overflow: visible;
   }  
 
-
   .menuBtnWrapper {
     display: none;
   }  
-
 
 
   .workWrapper .work {
@@ -495,12 +502,14 @@ a:hover {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (min-width: 1024px) {
 
+  /*
   .leftCol {
     width: 20%;
   }
   .rightCol {
     width: 80%;
   }
+  */
 
   .workWrapper .work {
     flex: 0 0 25%;
