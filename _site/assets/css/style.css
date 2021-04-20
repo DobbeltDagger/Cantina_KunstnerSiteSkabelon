@@ -197,8 +197,6 @@ body {
   display: block;
   float: left;
   min-height: 100vh;
-  border: 1px solid green;
-  /* width: 80%; */
   padding: 1rem 0px;
 }
 
@@ -210,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px 0px 1.5rem 0px;
   line-height: 1em; /* 0.95em; /* 1em; /* 1.05em; */
   font-weight: 700;
+  word-break: break-all;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   word-break: normal;
@@ -278,27 +277,50 @@ a:hover {
 /* ******************************************************************** */
 
 
-.menuWrapper {
-
+#menuWrapper {
+  padding-top: 0px; /*  1rem; */
 }
-.menuWrapper .headerNav {
+#menuWrapper .menuUl {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+#menuWrapper .menuUl {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
 
-.menuWrapper .headerNav li {
+
+#menuWrapper .menuUl li {
   display: block;
   width: 100%;
 }
+#menuWrapper .menuUl li:first-child {
+  margin-top: 1rem;
+}
+#menuWrapper .menuUl li ul li:first-child {
+  margin-top: 0px; /* 1rem; */
+}
 
-.menuWrapper .headerNav li a {
+#menuWrapper .menuUl li a {
   display: inline-block;
   text-decoration: none;
-  border: 1px solid red;
 }
-.menuWrapper .headerNav li a:hover {
-  color: red;
+#menuWrapper .menuUl li a:hover {
+  text-decoration: underline;
+}
+
+/* sub unordered list */
+#menuWrapper .menuUl li ul {
+  padding: 0px 0px 0px 1.5rem;
+}
+#menuWrapper .menuUl li ul li:last-child {
+  margin-bottom: 1rem;
+}
+/* active menu is lined */
+#menuWrapper .menuUl li a.activeAnchor {
+  text-decoration: line-through;
 }
 
 
@@ -323,18 +345,18 @@ a:hover {
   }
   .rightColInside {
     max-width: 1280px;
-    border: 1px solid blue;
+    border: 1px solid lightblue;
   }
 
   /* header */
   header {
     display: block;
     padding: 1rem;
-    border: 1px solid purple;
+    position: relative;
   }
   header #logoWrapper {
     width: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0px; /* 1rem; */
   }
   header #logoWrapper a {
     display: inline-block;
@@ -342,13 +364,46 @@ a:hover {
     text-decoration: none;
     color: var(--main-text-color);
     font-size: 2rem; /* 9.75rem; */
-    border: 1px solid blue;
   }
   header #logoWrapper a:hover {
     text-decoration: none;
     cursor: pointer;
   }
 
+  /* menu button */
+  .menuBtnWrapper {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0rem;
+    /* width: 3rem; height: 3rem; */
+  }
+
+  .menuBtnWrapper a {
+    display: block;
+    float: left;
+    /* width: auto; height: 2rem; */
+    padding: 1rem 1rem 0px 0px;
+  }
+
+  .menuBtnWrapper a img {
+    display: block;
+    float: left;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #menuWrapper.hidden {
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  #menuBtn {
+    transition: all 1s;
+  }
+  #menuBtn.down img {
+    transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+  }
 
 
   /* WORK Wrapper */
@@ -418,6 +473,18 @@ a:hover {
     width: 75%;
   }
 
+  #menuWrapper.hidden {
+    max-height: none; /*  0px; */
+    overflow: visible;
+  }  
+
+
+  .menuBtnWrapper {
+    display: none;
+  }  
+
+
+
   .workWrapper .work {
     flex: 0 0 33.3333%;
   }
@@ -446,7 +513,7 @@ a:hover {
 @media screen and (min-width: 1400px) {
 
   .workWrapper .work {
-    flex: 0 0 20%;
+    flex: 0 0 25%;
   }  
 
 }
@@ -456,7 +523,7 @@ a:hover {
 @media screen and (min-width: 1600px) {
 
   .workWrapper .work {
-    flex: 0 0 16.6666%;
+    flex: 0 0 20%;
   }
 
 }

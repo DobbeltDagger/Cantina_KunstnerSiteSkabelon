@@ -31,13 +31,15 @@
     <a href='/'>kunstner</a>
   </div>
 
-  <!-- navIcon -->
-  <!-- <div id='navIconWrapper'>
-    <a id='navIconBtn' href=''><img src='/assets/images/navIcon7.png'/></a>
-  </div> -->
+  <!-- open/close menu button -->
+  <div class='menuBtnWrapper'>
+    <a id='menuBtn' href=''><img src='/assets/images/arrow-down-solid.svg'/></a>
+  </div>
 
-  <div class='menuWrapper'>
-    <ul class="headerNav"><li class="listItem"><a href="/work/" class="anchor">Work</a></li>
+  <!-- menu -->
+  <div id='menuWrapper' class='hidden'>
+    <ul class="menuUl"><li class="listItem hasChildren"><a href="/work/" class="anchor">Work</a><ul><li class="listItem"><a href="/workCollection/skabelonWork/" class="anchor">skabelonWork.md</a></li>
+<li class="listItem"><a href="/workCollection/DeathOrGlory/" class="anchor">🕱 or Glory</a></li></ul></li>
 <li class="listItem"><a href="/about/" class="anchor">About</a></li>
 <li class="listItem"><a href="/contact/" class="anchor">Contact</a></li></ul>
   </div>
@@ -107,6 +109,29 @@
   <script>
     // all is loaded
     window.addEventListener("DOMContentLoaded", function() {
+
+      // setup menu button
+      const menuBtn = document.getElementById('menuBtn');
+      menuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        console.log("menu was clicked");
+        console.log("this", this);
+
+        // change visibility on menu
+        const menuElm = document.getElementById('menuWrapper')
+        
+        // menuElm.classList.toggle('hidden'); // works!
+
+        if (menuElm.classList.contains('hidden') === true) {
+          menuElm.classList.remove('hidden');
+          this.classList.add('down');
+        } else {
+          menuElm.classList.add('hidden');
+          this.classList.remove('down');
+        }
+
+      })
 
       var swiper = new Swiper('.swiper-container', {
         direction: 'horizontal', // 'vertical',

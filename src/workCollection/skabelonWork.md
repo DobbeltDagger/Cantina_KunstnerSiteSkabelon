@@ -5,6 +5,11 @@ imgUrl: '/assets/images/udstillingerStoreBilleder/1.jpg'
 thumbUrl: '/assets/images/udstillingerThumbs/1_thumb.jpg'
 date: 2000-01-01
 eleventyExcludeFromCollections: false
+eleventyNavigation:
+  parent: 'Work'
+  key: 'skabelonWork.md'
+  title: 'skabelonWork.md'
+  order: 0
 gallery:
  - {
    url: '/assets/images/udstillingerStoreBilleder/10.jpg',

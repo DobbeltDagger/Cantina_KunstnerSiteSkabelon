@@ -4,16 +4,17 @@
     <a href='/'>kunstner</a>
   </div>
 
-  <!-- navIcon -->
-  <!-- <div id='navIconWrapper'>
-    <a id='navIconBtn' href=''><img src='/assets/images/navIcon7.png'/></a>
-  </div> -->
+  <!-- open/close menu button -->
+  <div class='menuBtnWrapper'>
+    <a id='menuBtn' href=''><img src='/assets/images/arrow-down-solid.svg'/></a>
+  </div>
 
-  <div class='menuWrapper'>
+  <!-- menu -->
+  <div id='menuWrapper' class='hidden'>
     {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
       listElement: "ul",
       listItemElement: "li",
-      listClass: "headerNav",
+      listClass: "menuUl",
       listItemClass: "listItem",
       listItemHasChildrenClass: "hasChildren",
       activeListItemClass: "active",

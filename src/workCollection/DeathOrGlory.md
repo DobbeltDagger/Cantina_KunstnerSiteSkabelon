@@ -5,6 +5,11 @@ imgUrl: '/assets/images/udstillingerStoreBilleder/5.jpg'
 thumbUrl: '/assets/images/udstillingerThumbs/5_thumb.jpg'
 date: 2005-01-01
 eleventyExcludeFromCollections: false
+eleventyNavigation:
+  parent: 'Work'
+  key: '🕱 or Glory'
+  title: '🕱 or Glory'
+  order: 1
 ---
 
 Demowork .. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non varius nunc, eu cursus arcu. Nunc vitae iaculis nulla, varius blandit neque. Duis vitae quam feugiat, imperdiet dui ut, rhoncus tortor. Vivamus sollicitudin tortor ut justo venenatis, in gravida nisi finibus. Mauris in pulvinar massa. Nam arcu massa, gravida quis augue in, tempor ullamcorper odio. Suspendisse dapibus ac massa ac egestas. Praesent ultricies tempor porttitor. Sed quis justo ipsum. Vestibulum bibendum id augue ut pulvinar.
